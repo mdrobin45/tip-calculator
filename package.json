@@ -1,0 +1,17 @@
+{
+  "name": "tip-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build:css": "tailwind css src/css/tailwind.css -o css/tailwind.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
