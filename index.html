@@ -17,12 +17,14 @@
 </head>
 
 <body class="bg-gray-700">
-    <div class="grid grid-cols-2 gap-4 bg-white rounded p-5 mx-auto w-1/2 mt-20">
+    <div class="grid grid-cols-2 gap-4 bg-white rounded p-5 mx-auto w-3/5 mt-20">
         <div>
             <div>
                 <label class="text-lg">Bill</label>
                 <input class="w-full my-1 p-1 text-lg rounded bg-gray-100" id="billedAmount" placeholder="$" type="number">
             </div>
+            <label  class="text-lg" for="people">Number of People</label>
+            <input id="numberOfPerson" class="w-full my-1 p-1 text-lg rounded bg-gray-100" type="number">
             <div id="keyPad">
                 <label  class="text-lg">Select Tip</label>
                 <div class="grid grid-cols-3 gap-2 mt-1">
@@ -36,23 +38,21 @@
                     <input class="p-1 text-lg rounded bg-gray-100 text-white" type="text" placeholder="Custom">
                 </div>
             </div>
-            <label  class="text-lg" for="people">Number of People</label>
-            <input id="numberOfPerson" class="w-full my-1 p-1 text-lg rounded bg-gray-100" type="number">
         </div>
         <div class="mr-5 bg-pink-500 p-5 text-lg rounded text-white">
             <table>
                 <tbody>
                     <tr>
-                        <td class="pr-14 text-1xl">Tip Amount <br> <span class="text-sm">/Person</span></td>
-                        <td class="text-2xl">$<span id="tipAmount">00</span></td>
+                        <td class="text-1xl">Tip Amount <br> <span class="text-sm">/Person</span></td>
+                        <td class="text-2xl">$<span id="tipAmount">0.00</span></td>
                     </tr>
                     <tr>
-                        <td class="pt-10 text-1xl">Total Amount <br> <span class="text-sm">/Person</span></td>
-                        <td class="text-2xl pt-10">$<span id="totalAmount">00</span></td>
+                        <td class="pr-8 text-1xl">Total Amount <br> <span class="text-sm">/Person</span></td>
+                        <td class="text-2xl pt-10">$<span id="totalAmount">0.00</span></td>
                     </tr>
                 </tbody>
             </table>
-            <button class="text-lg rounded bg-gray-600 text-white cursor-pointer w-full py-2 mt-14">Reset</button>
+            <button id="resetBtn" class="text-lg rounded bg-gray-600 text-white cursor-pointer w-full py-2 mt-14">Reset</button>
         </div>
     </div>
 

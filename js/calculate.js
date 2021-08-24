@@ -20,3 +20,9 @@ document.getElementById('keyPad').addEventListener('click', function (event) {
         totalAmountPerPerson.innerText = PerPersonAmount.toFixed(2);
     }
 });
+document.getElementById('resetBtn').addEventListener('click',function(){
+    const tipAmountPerPerson = document.getElementById('tipAmount');
+    const totalAmountPerPerson = document.getElementById('totalAmount');
+    tipAmountPerPerson.innerText = '0.00';
+    totalAmountPerPerson.innerText = '0.00';
+})
