@@ -13,20 +13,20 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-700">
     <div class="grid grid-cols-2 gap-4 bg-white rounded p-5 mx-auto w-1/2 mt-20">
         <div>
             <div>
-                <label class="text-lg" for="bill">Bill</label>
-                <input class="w-full my-1 p-1 text-lg rounded bg-gray-100" id="bill" placeholder="$" type="number">
+                <label class="text-lg">Bill</label>
+                <input class="w-full my-1 p-1 text-lg rounded bg-gray-100" id="billedAmount" placeholder="$" type="number">
             </div>
-            <div>
+            <div id="keyPad">
                 <label  class="text-lg">Select Tip</label>
                 <div class="grid grid-cols-3 gap-2 mt-1">
-                    <input class="p-1 text-lg rounded bg-gray-600 text-white cursor-pointer" type="button" value="5%">
+                    <input id="FiveParcent" class="p-1 text-lg rounded bg-gray-600 text-white cursor-pointer" type="button" value="5%">
                     <input class="p-1 text-lg rounded bg-gray-600 text-white cursor-pointer" type="button" value="10%">
                     <input class="p-1 text-lg rounded bg-gray-600 text-white cursor-pointer" type="button" value="15%">
                 </div>
@@ -37,24 +37,27 @@
                 </div>
             </div>
             <label  class="text-lg" for="people">Number of People</label>
-            <input class="w-full my-1 p-1 text-lg rounded bg-gray-100" type="number">
+            <input id="numberOfPerson" class="w-full my-1 p-1 text-lg rounded bg-gray-100" type="number">
+            <button class="text-lg rounded bg-gray-600 text-white cursor-pointer w-full py-2 mt-14">Calculate</button>
         </div>
         <div class="mr-5 bg-pink-500 p-5 text-lg rounded text-white">
             <table>
                 <tbody>
                     <tr>
-                        <td class="pr-10 text-2xl">Tip Amount</td>
-                        <td class="text-2xl">$<span>00</span></td>
+                        <td class="pr-14 text-1xl">Tip Amount <br> <span class="text-sm">/Person</span></td>
+                        <td class="text-2xl">$<span id="tipAmount">00</span></td>
                     </tr>
                     <tr>
-                        <td class="pr-9 pt-10 text-2xl">Total Amount</td>
-                        <td class="text-2xl pt-10">$<span>00</span></td>
+                        <td class="pt-10 text-1xl">Total Amount <br> <span class="text-sm">/Person</span></td>
+                        <td class="text-2xl pt-10">$<span id="totalAmount">00</span></td>
                     </tr>
                 </tbody>
             </table>
             <button class="text-lg rounded bg-gray-600 text-white cursor-pointer w-full py-2 mt-14">Reset</button>
         </div>
     </div>
-</body>
 
+    <!-- Script -->
+    <script src="js/calculate.js"></script>
+</body>
 </html>
